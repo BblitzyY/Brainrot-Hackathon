@@ -106,7 +106,7 @@ label start:
         show ksi at left
         ksi "Watch me!"
         mcn "KSI bounces volleyball up and down violently on the floor."
-        show chill guy neutral with dissolve at right 
+        show chill guy neutral at right with dissolve
         chill "Chill down KSI." 
         chill "You’re a big bomboclat with a boombox; so not bing chilling rn."
         hide ksi
