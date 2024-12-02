@@ -3,15 +3,15 @@ define mc = Character("You", color="#c8ffc8", what_prefix='"', what_suffix='"')
 define mci = Character("You", color="#c8ffc8", what_italic=True)
 define mcn = Character(None, what_color="#ffee8c")
 define nug = Character("???", color="#ffa500", what_prefix='"', what_suffix='"')
-define chill = Character("???", color="#b0e0e6", what_prefix='"', what_suffix="'")
-define gig = Character("???", color="#cbc3e3", what_prefix='"', what_suffix="'")
-define amg = Character("Amongus Imposter", color="#c51111", what_prefix='"', what_suffix="'")
-define emo = Character("Edgemund", color="1c1c84", what_prefix='"', what_suffix="'")
-define tom = Character("Tomato Boy", color="#ffc0cb", what_prefix='"', what_suffix="'")
-define ksi = Character("KSI", color="c8ffc8", what_prefix='"', what_suffix="'")
-define quan = Character("Quandale Dingle Fairy", color="#1bfc06", what_prefix='"', what_suffix="'")
+define chill = Character("???", color="#b0e0e6", what_prefix='"', what_suffix='"')
+define gig = Character("???", color="#cbc3e3", what_prefix='"', what_suffix='"')
+define amg = Character("Amongus Imposter", color="#c51111", what_prefix='"', what_suffix='"')
+define emo = Character("Edgemund", color="1c1c84", what_prefix='"', what_suffix='"')
+define tom = Character("Tomato Boy", color="#ffc0cb", what_prefix='"', what_suffix='"')
+define ksi = Character("KSI", color="c8ffc8", what_prefix='"', what_suffix='"')
+define quan = Character("Quandale Dingle Fairy", color="#1bfc06", what_prefix='"', what_suffix='"')
 define ski = Character("Mr Skibidi Toilet", color="#cabd99", what_prefix='"', what_suffix='"')
-define tate = Character("Andrew Tate", color="#d3d3d3", what_prefix='"', what_suffix="'")
+define tate = Character("Andrew Tate", color="#d3d3d3", what_prefix='"', what_suffix='"')
 define qd = Character("Turkish Quandale Dingle", color = "#ffc881ff", what_prefix='"', what_suffix='"')
 define bt = Character("Blue Tie Kid", color="#242ec7", what_prefix='"', what_suffix='"')
 
@@ -329,7 +329,7 @@ label start:
         play sound "audio/sfx_store_bell.mp3" fadein 1.0 volume 0.5
         play music "audio/bgm_gigachad.mp3" fadein 1.0 volume 0.5
         mcn "Once you enter the store you feel an almost oppressive amount of aura."
-        mcn "At the cashier, a man is casually curling 60 kilo weights"
+        mcn "At the cashier, a man is casually curling 60 kilo weights."
         show gigachad with dissolve
         gig ". . ."
         mcn "But he isn’t just any man… you can feel it in your bones."
@@ -337,9 +337,8 @@ label start:
         mcn "You stockpile on some Skyline Chilli and then timidly waddle up to the cashier."
         gig "Hey, first time at Gyattalicious? Haven’t seen you around before."
         mcn "He mogs you so hard you have to physically restabilise your balance without falling down on your knees like a rando in Walmart."
-        mc "Uhh yeah! Just moved here and all."
-        gig "Oh I’m a junior. I go to the local high school. Ohio Rizz High."
-        mcn "A glint of knowing pasts his eyes"
+        mc "Uhh yeah! Just moved here and all. Oh I’m a junior. I go to the local high school. Ohio Rizz High."
+        mcn "A glint of knowing pasts his eyes."
         gig "You're a real one king."
         mcn "You quake in your boots."
         gig "I graduated from there last year, and now I go to Mogging College."
@@ -352,24 +351,25 @@ label start:
         mci "Up close, his features seem even sharper."
         mci "His jawline looks like it could cut me if I ran my finger along it lolol."
         stop music
-        scene nighttime streets with fade
+        scene bg nighttime streets with fade
         play music "audio/bgm_nighttime.mp3" fadein 1.0 volume 0.5
         mci "Damn, it’s so quiet here at night, it’s unnerving. Back in Florida we never had streets this still."
         play sound "audio/sfx_footsteps.mp3" fadein 1.0 volume 0.5
         mcn "You hear someone from behind."
         mcn "Not exactly behind behind, but somehow closing in on the distance between you and them."
         mci "I am fr getting chased rn??"
-        mcn "You gather ur balls and speedily take a peek behind-"
         play sound "audio/sfx_crash.mp3" fadein 1.0 volume 0.7
+        mcn "You gather ur balls and speedily take a peek behind-"
+        scene bg nighttime streets with hpunch
         chill "Ahh. . . my ass crack."
-        show chill guy mysterious with dissolve
+        show chill guy mystery with dissolve
         mc ". . . !"
-        mcn "Under the streetlamp, you can finally distinguish his features from the dark surrounding you"
+        mcn "Under the streetlamp, you can finally distinguish his features from the dark surrounding you."
         mcn "You search his eyes for an awkwardly long amount of time."
         mcn "And that’s when it hits you."
         mc "Huh? Aren’t you. . ."
         mc "Chill Guy?!"
-        hide chill guy mysterious with dissolve
+        hide chill guy mystery with dissolve
         show chill guy neutral with fade
         stop music
         play music "audio/bgm_chillguy.mp3" fadein 1.0 volume 0.5
@@ -389,14 +389,38 @@ label start:
         hide chill guy neutral
         show chill guy serious
         chill "Wait, [mcname]. . ."
+        play sound "audio/sfx_running.mp3" fadein 1.0 volume 0.5
         mcn "You rush past him before you can regret the longing that colours his eyes. The pavement gives way to your feet, a loud heartbeat drumming in your skull."
         scene bg bedroom
+        with fade
+        stop music
         play music "audio/bgm_symphony.mp3" fadein 1.0 volume 0.5
         mci "Damn, today was so:"
         menu:
             "Skibidi":
                 jump choiceskibidi
-            "
+            "Unskibidi":
+                jump choiceunskibidi
+            
+    
+    label choiceskibidi:
+        mci "Dago was super nice to me today for some reason."
+        mci "I hope we can become closer friends."
+        mci "Oh! And Edgemund, was it?"
+        mci "He would be lowkey goated at crossdressing… hmm… "
+        jump day1sleep
+    
+    label choiceunskibidi:
+        mci "Fuck, I hope Chill Guy doesn’t go to the same school as me. I didn’t see him there today, but it’s the only possible school around here."
+        jump day1sleep
+    
+    label day1sleep:
+        mcn "And just like that you drift off to sleep."
+        scene black
+        tate "I’m a feminist."
+        mci "Huh?? Why am I dreaming about Andrew Tate?!"
+
+
 
 
 
