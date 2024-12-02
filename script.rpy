@@ -1,542 +1,316 @@
-# fade in screen title here --> could just be a background highkey
-define mc = Character("You", color="#c8ffc8", what_prefix='"', what_suffix='"')
-define mci = Character("You", color="#c8ffc8", what_italic=True)
-define mcn = Character(None, what_color="#ffee8c")
-define nug = Character("???", color="#ffa500", what_prefix='"', what_suffix='"')
-define chill = Character("???", color="#b0e0e6", what_prefix='"', what_suffix='"')
-define gig = Character("???", color="#cbc3e3", what_prefix='"', what_suffix='"')
-define amg = Character("Amongus Imposter", color="#c51111", what_prefix='"', what_suffix='"')
+﻿# The script of the game goes in this file.
+
+# Declare characters used by this game. The color argument colorizes the
+# name of the character.
+
+define mc = Character("[mcname]", color="#ffffff", what_prefix='"', what_suffix='"')
+define mci = Character("[mcname]", color="#ffffff", what_italic=True)
+define mcn = Character(None, what_color="ffee8c")
+define nug = Character("Dago", color="ffa500", what_prefix='"', what_suffix='"')
+define chill = Character("Chill Guy", color="b0e0e6", what_prefix='"', what_suffix='"')
+define gig = Character("Gigachad Senpai", color="cbc3e3", what_prefix='"', what_suffix='"')
+define amg = Character("Amongus Imposter", color="c51111", what_prefix='"', what_suffix='"')
 define emo = Character("Edgemund", color="1c1c84", what_prefix='"', what_suffix='"')
-define tom = Character("Tomato Boy", color="#ffc0cb", what_prefix='"', what_suffix='"')
+define tom = Character("Tomato Man", color="ffc0cb", what_prefix='"', what_suffix='"')
 define ksi = Character("KSI", color="c8ffc8", what_prefix='"', what_suffix='"')
-define quan = Character("Quandale Dingle Fairy", color="#1bfc06", what_prefix='"', what_suffix='"')
-define ski = Character("Mr Skibidi Toilet", color="#cabd99", what_prefix='"', what_suffix='"')
-define tate = Character("Andrew Tate", color="#d3d3d3", what_prefix='"', what_suffix='"')
-define qd = Character("Turkish Quandale Dingle", color = "#ffc881ff", what_prefix='"', what_suffix='"')
-define bt = Character("Blue Tie Kid", color="#242ec7", what_prefix='"', what_suffix='"')
+define quan = Character("Quandale Dingle Fairy", color="1bfc06", what_prefix='"', what_suffix='"')
+define ski = Character("Mr Skibidi Toilet", color="cabd99", what_prefix='"', what_suffix='"')
+define tate = Character("Andrew Tate", color="d3d3d3", what_prefix='"', what_suffix='"')
 
+define gyatt_coins = 0
+call shop
+
+default gyatt_coins  = 0
+default mcname = "bob" ## get rid of this line afterwards
+# the mcname part didn't work wtf, just past this into the bottom of sherry's code and it should work
+
+# The game starts here.
 label start:
-    label prologue:
-        show text "Prologue - Day 1" with dissolve
-        pause 1.0
-        hide text with fade
-        play music "audio/bgm_alarm.mp3" fadein 0.0 volume 0.5
-        mcn "A loud alarm blares incessantly on your left, and you flip on your side to shut it off."
-        stop music fadeout 1.0
-        mci "New walls, a clean white ceiling. . ."
-        scene bg bedroom
-        with fade
-        play music "audio/bgm_symphony.mp3" fadein 1.0 volume 0.5
-        mci "It’s been almost a fortnight since I moved to Ohio but. . . I kinda miss Florida already."
-        mci "Oh right!"
-        mci "Today’s also my first day at Rizz Ohio High!"
-        play sound "audio/sfx_blanket.mp3"
-        scene bg kitchen
-        with fade
-        play sound "audio/sfx_stairs.mp3"
-        mci "The kitchen hall is strangely empty huh. . . Oh right, Mom and Dad left early in the morning for their trip to Tomato Town. I wonder how they’re doing."
-        scene bg breakfast
-        with fade
-        mci "This breakfast looks so skibidi, but I'm going to be late for school." 
-        mcn "You instead just grab a piece of toast."
-        stop music
-        scene bg neighbourhood
-        play music "audio/bgm_buckle.mp3" fadein 1.0 volume 0.5
-        with fade
-        mcn "You offhandedly check your watch only to find it’s. . . 7:69am??"
-        mcn ". . ."
-        mcn "Which means you have 11 minutes to make a 20 minute hike. What the sigma."
-        mc "Oops kyaaaaaaaah! I'm gonna be late!!"
-        mc "Gotta go sonic!"
-        show running naruto
-        stop music fadeout 1.0
-        play music "audio/bgm_running_in_90s.mp3" fadein 1.0 volume 0.5
-        mc "Shit shit. . . Shit shit shit shit shit."
-        mc "I really hope I’m not late on my first day to-" 
-        stop music
-        scene black
-        play sound "audio/sfx_bicycle_bell.mp3" fadein 0.5 volume 0.5 
-        pause 2.0
-        play sound "audio/sfx_bike_brake.mp3" fadein 0.5 volume 0.5 
-        pause 3.0
-        play sound "audio/sfx_fall.mp3" fadein 0.5 volume 0.5
-        scene bg neighbourhood with hpunch
-        with fade
-        play music "audio/bgm_buckle.mp3" fadein 1.0 volume 0.5
-        mc "Kyaaaa!!! Are you ok?"
-        mci "This guy. . . He somehow braked 3.1415926535 nanoseconds before we collided?!"
-        nug "Yuh!! All good vro. Are you okay?"
-        mc "Yeah I’m good. I didn’t flinch at all."
-        mci "I flinched so hard that my dawgs started gripping the cement lowkey but I’m not admitting that to a guy I just met."
-        mc "Is your. . . bike ok?"
-        nug "Naw ye don’t worry about my bike he bing chilling."
-        nug "I once threw him off the National Museum of the US Air Force and he didn’t get a scratch!!"
-        mci "Damn what a sigma."
-        mci "That's like +1000 aura."
-        mc "Ok. . ."
-        nug ":)"
-        mc "Do you know where Rizz Ohio High is btw?"
-        mc "Today’s my first day."
-        nug "Oh for sho vro, I’ll take you there."
-        nug "I actually go there as well. Dap me up brother."
-        mcn "You go in for a dap, feeling like an alpha."
-        nug "Anyways, what's your name?"
+    scene black
+    pause 5.0
+    show text "Chapter 1 - Day 2" with dissolve
+    pause 1.0
+    hide text with fade
+    # new day, extra gyatt points
+    $ gyatt_coins = gyatt_coins + 25
 
-    label name_and_addresses_choosing:
-        menu:
-            "P.Giddy":
-                $ mcname = "P. Giddy"
-                jump name_ested
-            "Skibbitney":
-                $ mcname = "Skibbitney"
-                jump name_ested
-            "Gronkxtron":
-                $ mcname = "Gronkxtron"
-                jump name_ested
-            "Gyatlyn":
-                $ mcname = "Gyatlyn"
-                jump name_ested
-            "Audrey":
-                jump choiceaudrey   
-            "I want to choose my own name":
-                $ mcname = renpy.input("What's your name?", "Bob", length=30, exclude=" 0123456789+=,.?!<>{}[]()").strip() or "Bob" 
-                jump name_ested
+    #play music "audio/bgm_alarm.mp3" fadein 0.0 volume 0.5
+    #stop music fadeout 1.0
+    #play sound "audio/sfx_blanket.mp3"
+    #play sound "audio/sfx_stairs.mp3"
+    #play music "audio/neighbr.mp3" # i think you might need to look over this cause idk i named it right
+    scene bg neighbr # again ill ask sherry to handle this part
+    with fade
+    # code the sprite into the cventre
+    mc "Another skibidi Tuesday morning!"
+    mc "Maybe Dago will bike with me to school again"
+    mc "What a sweet 'n sour guy"
+    #play sound "audio/bike bell ringing" # ill leave it to you to do sound ngl
+    #play sound "audio/gegadio.mp3"
+    #play sound "audio/footsteps.mp3"
+    # dago sprite enters on right, so then move mc sprite to left
+    nug "Sup fellow Ohio rizzler!"
+    nug "Looks like vro's actually on time today."
+    nug "Whaddya think of your first day at school?"
+    mc "Kinda based lowkey."
+    mci "We only just met yesterday but he talks like we've been \'vro's\' for like 20 seasons."
+    mci "Not that I mind it though. \n\nThis whole friendship thing is . . . kinda weird to get used to."
+    mcn " You can imagine upgrading your school grindset with this guy."
+    #fade in of zoomed in Dago's smirk
+    mcn "His off-kilter grin appears in your mind."
+    mci "Hmmm, maybe hanging out together isn't too bad."
+    nug "Yeah vro, y'know, like education?"
+    nug "It's like a real life glitch."
+    mc "Dawg . . ."
+    mci "What is this guy even on about LOL."
+    mci "These Ohio rizzlers . . . sigh. \nI feel like he has no idea how education works in real life."
+    nug "Vro hurry up. \nWe're gonna be late for rizzonomics with Mr Skibidi again."
+    mci "I wonder If I will become like this guy one day. \nSmirking 24/7 without a worry in the world."
+    nug "HURRY UP XD"
+    nug "At this rate, we have to Naruto run."
+    mc "Wait, where's your bike???"
+    nug "I forgot :)"
+    mcn "You sigh."
+    ## running to school sounds
+    ## some sort of transition to school
+    scene black
+    pause 3.0
+    show text "at school" with dissolve
+    pause 1.0
+    hide text with fade
 
-        label choiceaudrey:
-            mcn "Hi Audrey!!!"
-            $ mcname = "Audrey"
-            jump name_ested
-
-    label name_ested:
-        $ mc = Character("[mcname]", color="#c8ffc8", what_prefix='"', what_suffix='"')
-        $ mci = Character("[mcname]", color="#c8ffc8", what_italic=True)
-        mc "Call me [mcname]."
-        mc "What's yours?"
-        $ nugname = "Dago"
-        $ nug = Character("Dago", color="#ffa500", what_prefix='"', what_suffix='"')
-        nug ". . . Dago."
-        stop music
-        play sound "audio/sfx_gegagedigedagedago.mp3" fadein 0.1 volume 0.5 
-        show dago neutral
-        nug "Gegagedigedage Dago."
-        play music "audio/bgm_buckle.mp3" fadein 1.0 volume 0.5
-        nug "But you can call me Dago."
-        mc "Okay, Dago."
-        mc "Nice to meet you"
-        nug "Now just hop on, and be the booktok girl to my biker boy."
-        hide dago neutral
-        with dissolve
-        mci "Omg why's he kinda kawaii."
-        mcn "You Debby Ryan hair tuck and blush."
-        mc "Do you think we can make 9 o’clock?"
-        nug "Lol probs not but we can try."
-        nug "I’m usually late anyways, but Sensei doesn’t mind."
-        mci "Omg he's not into Wonyoungism. I can't be caught lacking with an academic victim lowkey."
-        stop music
-        scene black
-        play sound "audio/sfx_pedalling.mp3" fadein 1.0 volume 0.5
-        pause 5.0
-        play sound "audio/sfx_door_slide.mp3"
-        pause 4.0
-        scene bg classroom 
-        with fade
-        play music "audio/bgm_skibidi.mp3" fadein 1.0 volume 0.5
-        nug "Omatase shimashita Sensei!!! Sorry we late :P"
-        mcn "Tf up with this weeb people say okureru sumimasen normally anyways"
-        mcn "You bow your head down in greeting. The teacher has a sinewy figure, sort of lanky but still maintains an air of proper authority somehow." 
-        mcn "The toilet connected to his torso gives him a negative canthal tilt though."
-        show skibidi angry with dissolve
-        ski "Skibidi toilet Ohio rizz. You both get to your seat- oh."
-        ski "It’s the new kiddo!"
-        show skibidi neutral with dissolve
-        ski "Why don’t you introduce yourself to the class?"
-        mcn "You scan the classroom tentatively as Dago sits himself at a seat in the centre of the room."
-        mcn "There’s a figure at the corner of the room that catches your eye…"
-        mci "Dark, goth, emo—"
-        mci "Is that a hot alt chick wearing a fluffy jumpsuit…?"
-        show edge neutralleft at left
-        with dissolve
-        ski "You’re [mcname], right? From Florida?"
-        hide edge neutralleft
-        with dissolve
-        mc "Yes sir- I mean Sensei."
-        ski "Well then, share three fun facts about yourself."
-        mci ". . ."
-        mci "Wtf are we in elementary school? Alright then."
-        mci "Uhhh, well. . . "
-        menu:
-            "I touch grass everyday.":
-                jump b
-            "I fought doomscrolling-sama when I was 12 and won.": 
-                jump b
+    # BG classroom
+    # classroom music
+    # make sure to somehow change MC's name as accordingly
+    # checkpoint, extra gyatt points
+    $ gyatt_coins = gyatt_coins +25
+    # lowkey, we should have a coin deposit sound
+    ski "I'm sure you rizzlers heard yesterday, but our new student here, [mcname], is joining us until we graduate."
+    ski "Which I hope will be before gta 6."
+    mcn "You cringe."
+    ski "Unfortunately, that means our class number is now uneven."
+    ski "Instead of the usual pairs, I need you to split into groups of three to start our looksmaxxing lesson for today."
+    mcn "You glance at Dago. \n He gets the memo and griddles over to your desk."
+    mcn "He also wants to be Looksmaxxing homies, hey. \n But who will be your third wheeler?"
+    mcn "By now the class has erupted into a  feud, trying to snag up their mates."
     
-    label b:
-        mc "And. . ."
+    default choice1 = False
+    default choice2 = False
+    default choice3 = False
+    default choice4 = False
+    label option1:
         menu:
-            "I have the biggest gyatt of all of Ohio.":
-                jump c
-            "I have won the mogging championship three times.":
-                jump c
-    
-    label c:
-        mc "Lastly. . ."
-        menu:
-            "I came from Florida.":
-                jump choice_c1
-            "I have a pet cat named Mogster Mew Mew.":
-                jump normal
+            "Edgemund? Edgemund's highkey a mogger." if not choice1:
+                jump choices1_a
+            "What about Tiktok Rizz Party Tomato Boy? He be kinda bad ngl." if not choice2:
+                jump choices1_b
+            "Amongus - what if he's a chad braniac under that suit?" if not choice3:
+                jump choices1_c
+            ". . . Chill Guy?" if not choice4:
+                jump choices1_d
         
-    label choice_c1:
-        ski "Well yeah, we already knew the last one. But thanks."
-        jump normal
-    
-    label normal:
-        ski "Ok cool stuff. Go sit. . . somewhere."
-        ski "Just at the second row, over there."
-        ski "And Gegagedigedage Dago, you might as well show them around the school at lunch since you guys came in together."
-        mcn "Dago beams from his seat."
-        show dago neutral at left 
-        with dissolve
-        nug ":)"
-        hide dago neutral with dissolve
-        mcn "Mr Skibidi resumes his teaching as if you both didn’t arrive late."
-        mcn "He draws up complicated diagrams on the blackboard related to some new subject called Mewing 101."
-        mci "I can't understand it much, but I reckon I’ll get it next lesson."
-        scene black
-        with fade
-        pause 1.0
-        scene bg classroom
-        with fade
-        play sound "audio/sfx_bell.mp3" fadein 1.0 volume 0.5
-        show skibidi neutral
-        ski "Skibidi toilet Ohio rizz!!"
-        ski "Well that's the bell."
-        ski "Get your gyatts out of my class. You’ll have Mrs. Sigmay next period."
-        hide skibidi neutral with dissolve
-        mci "That was actually quite a skibidi lesson."
-        mci "Mr Skibidi seems nonchalant but. . . he really cares about these kids. I can tell through the way he teaches, huh."
-        show dago neutral with dissolve
-        nug "Sup vro."
-        nug "Want me to give you a tour now?"
-        mc "Yeah I’d like that, thanks"
-        mcn "You look over your shoulder to the other side of the room where the hot goth chick was."
-        show edge neutralleft at left
-        with dissolve
-        menu:
-            "Can you introduce me to that person over there?":
-                jump choice1
-            "Don’t say anything bc you might lose 42069 aura.":
-                jump choice2
-    
-    label choice1:
-        nug "Oh, that’s Edgemund, he has generational aura debt."
-        nug "He doesn’t really talk— like, to anyone. Why do you ask?"
-        mcn "You dodge his question."
-        mc "Wait so that’s a dude? Not an emo chic- I mean, so, that’s not a girl wearing a fursuit?"
-        nug "Naw vro. You blind ahh."
-        nug "I’d recommend you just leave him alone tho. He’ll probably drag you to the backrooms if you talk to him."
+        label choices1_a:
+            nug "Nah, lil’ ol’ Edger over there is a bit too beta for us. Pick someone else."
+            $ choice1 = True
+            jump option1
+
+        label choices1_b:
+            nug "We can't have his redness cockblocking our looksmaxxing today."
+            $ choice2 = True
+            jump option1
+
+        label choices1_c:
+            nug "That loser? Nah vro, we're gonna be in aura debt cause of him. Bro's too much of a sussy baka."
+            $ choice3 =True
+            jump option1
+
+        label choices1_d:
+            $ gyatt_coins = gyatt_coins +100
+            # money sound effects
+            $ choice4 = True
+            nug "Yeah lets do it! He's gonna mog everyone."
+            nug "But idk if KSI is gonna be all gelatinous jellous though."
+            jump back1
+        label back1:
+            mci "So Chill Guy really does go to this school as well."
+            mc "KSI who?"
+            mcn "Your stomach flips as the thought of Chill Guy being chummy with someone else consumes you."
+            mci "Wait, what am I thinking?"
+            mci " Chill guy was the one who abandoned me, I shouldn't be wanting him so bad."
+            nug "KSI is Chill Guy's bestie."
+            mcn "You feel your heart sink into your stomach just a little."
+            nug "Let's go vro."
+            nug "Ask Chill guy o'er."
+            mc "M-m-m-m-me?\nA-a-asking Chill Guy Chan????"
+            mcn "Butterflies dash through your stomach as your feet become glued to the ground."
+            mci "I ran away from him yesterday . . . !\nThat was so baka of me, how can I face him today?"
+            nug "Gyatt up and ask already!!"
+            nug "He's lowkey just a chill guy!"
+            mc "Yea, true that . . .\nEven if he's mad at me, I just need to remember he's lowkey just a chill guy."
+            nug "Aight cus wtv sails ur ship."
+            ## new scenery?
+            mcn "You pull up to Chill Guy's seat, and he turns to look at you with that same unchanging expression."
+            mci "Oh my god . . .\nI think my heart is about to leap out of my chest."
+            mc "Hey baka. *blushes*\nWanna looksmaxx with us?"
+            mci "Was that chill enough for Chill Guy?\n Please tell me he says yes."
+            mci "I'm begging him. I'd sell my fortnite battlepass for him to say yes."
+            mcn "Chill Guy seems surprised, but doesn't question you."
+            mcn "You can't fault him for it though, since you just ghosted him irl yesterday night."
+            chill "Yea, I'm chill with that.\nLet me just double check with KSI real quick."
+            #bgm the thick of it
+            mcn "KSI slams open the classroom door and somehow appears next to Chill Guy in a flash."
+            ksi ". . ."
+            ski ". . ."
+            mcn "Mr Skibidi doesn't seem to care."
+# thick of it fades out, BGM lofi again
+            ksi "You wassup little dude?\n I could hear my name."
+            chill "Me and my homies, [mcname] and Dago are gonna looksmaxx together for Skibidi's class today."
+            chill "That chill with you?"
+            mcn "You hear a slight growl emanating from KSI's throat."
+            mci "KSI wtf? Why's he growling at me??? KYAAAAAA."
+            mcn "You turn around to Dago to see if he's noticed as well, but Dago's off yapping with other classmates."
+            nug "Hang on, [mcname] I totally forgot that I was gonna stack with Livvy Dunne and Grimace."
+            nug "That wasn't very skibidi of me . . .\nNegative 100 aura,, mb cuh!!"
+            mcn "You mentally facepalm.\nAnd curse Dago."
+            mci "Does that mean me and Chill Guy are going to be alone?????"
+            mci "Well, not exactly alone. \nWouldn't KSI be joining?"
+            default choice11 = False
+            default choice12 = False
+        label back2:   
+           menu:
+                "Ask Mr Skibidi if you can be a pair" if not choice11:
+                    mcn "You griddy up to Mr Skibidi and ask him about changing the trio to a pair."
+                    ski "What the sigma?\n No, gyatt back and join KSI."
+                    mcn "You walk back to Chill Guy's desk dejectedly."
+                    $ choice11 = True
+                    jump back2
+                "Invite KSI into the trio and skip the Skibidi rage fest.":
+                    $ gyatt_coins = gyatt_coins +100
+# gyatt coins sound
+                    $ choice12 = True
+                    menu:
+                        "Do a little Subway Surfer compilation, gather your balls, and ask KSI yourself.":
+                            $ gyatt_coins = gyatt_coins +100
+# money sound
+                            ksi "UGH."
+                            ksi "wot in the Rizz Ohio do you want . . .\nBro thinks he's Carti."
+                            mci "I think he thinks I can't hear him . . ."
+                            mci "He doesn't seem to be declining though. Let me ask again."
+                            mcn "You watch as KSI turns up the boombox, repeatedly playing his own voice in a song."
+                            # increase music, thick of it
+                            mcn "Your domain collapses under KSI's alpha male energy."
+                            mc "Ummm, yeah! Do you want to join me and Chill Guy?"
+                            mcn "KSI looks at you for 1 nanosecond, scoffs, then looks away."
+                            mci "He was so nice to Chill Guy just then!!! What's up with him changing moods so quick, damn."
+                            mcn "Chill Guy interrupts for a second, and is finally able to grab KSI's attention."
+                            jump back3
+                        "Pull a non-nonchalant dreadhead and let Chill Guy ask KSI instead.":
+                            jump back3
+        label back3:
+            chill "Hey KSI, we should form a trio then."
+            mcn "KSI nods, and hence ends up joining your looksmaxxing empire."
+            mcn "You notice that he keeps staring at Chill Guy and singing Kiki under his breath."
+            # short sfc, kiki do you love me
+            chill "Blud, calm down a bit.That loud boom box isn't very chill."
+            # thick of it fades out, BGM - lofi again
+            chill "Also, meet [mcname]! You weren't here yesterday, but they just moved here."
+            ksi "What kind of sore loser moves here in the middle of the term?"
+            ksi "That was soooooo last year."
+            mcn "You notice that damn, KSI already thinks you're a gooner."
+            mcn "He T-poses on the spot."
+            mci "What in the goofy ahh is the 2016 ahh pose? That is so not poggers."
+            mci "At least Chill Guy Chan hasn't mentioned anything about yesterday yet . . ."
+            chill "Chill my guy. [mcname] is lowkey just a chill guy too bro."
+            mci "Why's Chill Guy sticking up for me? What if he's . . ."
+            mci "Am I delulu to think I could rizz him up??"
+            mcn "Your thoughts are interrupted by KSI blowing spitballs at your level 1000 gyatt."
+            # bgm thick of it
+            ksi "Get L ratioed you bozo. How does one even achieve that build? That's some sort of chungus shit."
+            menu:
+                "H-h-h-hey stob it. Thats not very sigma of you!!":
+                    mcn "As you are about to respond, Chill Guy interrupts."
+                    # thick of it fades out
+                    chill "Chillax guys, it's not that deep."
+                    chill "we should be working on looksmaxxing before Mr Skibidi comes around and flushes us down his toilets."
+                    chill "I mean I'm chill wsith that, but I dont know about you, KSI."
+                    mcn "Chill Guy furrows his brows."
+                    jump back4
+                "Go sit in a corner and cry.":
+                    mcn "As you try leave, Chill Guy takes his hands out of his pockets for the first time, and grabs yours."
+                    chill "Hey [mcname], it's not that deep."
+                    chill "Come back and I'll talk to KSI about it. He wasn't being very chill and that's not how we do things around here."
+                    jump back4
+        label back4:
+            mcn "Both of you reluctantly return to do looksmaxxing homework with Chill Guy, but your mind keeps wandering to how swag he looked earlier."
+            mcn "You could say that he saved you, in a way."
+            mci "KSI was a bit cringle just now."
+            mci "Like some sort of sussy baka, an not ina  good way like the nerd Amongus guy. I wonder what's up with him?"
+            # bg fades to black
+
+            # break time, bg cafeteria, sfx bell rings, bgm change lofi
+            $ gyatt_coins = gyatt_coins +25
+            mc "Whopper Whopper Whopper Whopper!!"
+            mcn "You pull out your lunchbox."
+            mci "MMMMM. Thsi glizzy smells like it could be fanum taxed at any moment."
+            mci "I mean . . . If this was someone else's sandwich, I would totally fanum tax it."
+            #sfx gegadigendiago
+            nug "Heya [mcname], how was class? How ya feel about our Rizz academy so far?"
+            nug "Two lessons in two days, and you got to hang out with Chill Guy, the chillest vro, of all people!"
+            mc "Yeah Chill Guy is pretty poggers."
+            mc "I don't know about KSI though. There's something a bit funny about him, lowkey gassed up or something. And he's already against me for no reason."
+            mc "A-anyways, what do you mean \'Chill Guy, of all people\'?"
+            nug "OMG OMG OMG you don't know????"
+            nug "Haven't you noticed that he's so chill?"
+            mci "Well yeah. What a captain obvious."
+            nug "Barely anyone gets to speak with him cause KSI is always around. Him and his delulu ahh are always stuck together like buttcheeks."
+            mc ". . . Do you know why that is?"
+            nug "Why you askin'?\nYou interested?"
+            menu:
+                "I-i-interested in Chill Guy???? I mean . . . just maybe . . .":
+                    $ gyatt_coins = gyatt_coins+25
+                    mc "I used to know him before cooming to Ohio . . ."
+                    nug "What in the fortnite battle pass are you on about vro? . . ."
+                    jump back5
+                "You mean there's something going on between KSI and Chill guy????":
+                    nug "All my fellas find it strnge too. He's always staring and always knows hwere Chill Guy's massive gyatt is."
+                    jump back5
+                "No, not interested. That sounds like something a beta would ask!"
+                    nug "Oh."
+                    nug "I thought you would be up for some gossip. Go piss girl."
+                    jump back5
+        label back5:
+            mcn "You quickly scarf down your glizzy as lunch ends."
+            mci "Time to looksmaxx again with Chill Guy and his buddy KSI . . ."
+            mcn "You're kind of dreading losing braincells with KSI, but at lest Chill Guy will be there again."
+            mci "Is he ever going to bring up our childhood . . .?"
+
+# fade tp black
+    label subconscious:
+        $ gyatt_coins = gyatt_coins +25
+        tate "So . . . you're ogling Chill Guy's gyatt, huh?"
+        tate "You zesty for Chill Guy?"
         mc "???"
-        mc "Okay. . ."
-        mci "Damn I really thought that was a hot alt girl huh. Oh well, no big tiddy goth gf for me ig."
-        jump choice2
-    
-    label choice2:
-        hide edge neutralleft with dissolve
-        mc "Let's do the tour."
-        nug ":)"
-        show bg cafeteria with fade
-        stop music
-        play music "audio/bgm_cafeteria.mp3" fadein 1.0 volume 0.1
-        nug "This is the cafeteria!"
-        nug "We all usually eat here for lunch, but some people go yap in any empty classrooms they find."
-        hide dago neutral with dissolve
-        mci "Woah this place looks like somewhere I could do the griddy in. It’s lowkey giving prison-core."
-        show dago neutral with dissolve
-        nug "So over there. . ."
-        hide dago neutral with dissolve
-        mcn "Dago points to a particularly congested group of Gen Z kids who are playing Brawl Stars and have their eyes glued to videos of Kai Cenat in a maid costume."
-        show turkish qd:
-            xalign 1.5
-        play sound "audio/bgm_carnival.mp3" fadein 1.0 volume 0.5 loop
-        qd "Yo Blue Tie Kid, what the sigma are you watching??"
-        show tomato boy with dissolve
-        tom "YOOOOOOOOOOOO!!!!"
-        show blue tie with dissolve:
-            xalign -0.5
-        bt "Ain’t no way cuh. Did you pray today?"
-        tom ". . ."
-        tom "YOOOOOOOOOOOO!!!!!"
-        show dago neutral with dissolve:
-            xalign 0.25
-            yalign 1.0
-        nug ". . . is the Rizz Party gng. They’re the popular vros but on god they loud ahhh."
-        mci "That dude’s face is so red..! He’s not even laughing or anything though. Get it white boi."
-        mci "I wonder how red he can go."
-        nug "And over at that table are 'the L-gamerz'"
-        hide tomato boy 
-        hide blue tie 
-        hide turkish qd 
-        with dissolve
-        stop sound
-        mcn "You narrow my eyes to try to figure out what they’re playing on their iPads. You think it’s Subway Surfers."
-        nug "You see that imposter there with his back to the wall?"
-        nug "That’s their biggest L… Uhh, L for leader."
-        show among us neutral at right 
-        with dissolve
-        play sound "audio/sfx_sus.mp3" fadein 1.0 volume 1.0
-        amg ". . ."
-        mc "Wow he's so small and shiny"
-        nug "Apparently his past girlfriends have all said he’s super buff. . . But vro just hides it all under his hardy exterior, y’know?"
-        nug "No one knows if it’s true."
-        mcn "Amongus looks up from his iPad for a split second, and you accidentally lock eyes."
-        mcn "His gaze is deep—even if it lasted for just for a millisecond—and in that instant behind his goggles you see an immense profundity and aura in him."
-        amg ". . . . . !!"
-        hide among us neutral
-        show among us buff at right
-        mcn "Amon reverts his eyes as quickly as they joined yours."
-        hide among us buff
-        show among us neutral at right
-        mci "What was that..?"
-        mcn "You can feel your heart going dokidoki. . . But then you start to hearing him play Temple Run instead of Subway Surfers. That gives you the ick."
-        hide among us neutral
-        nug "And then over there. . ."
+        mc "Ummm, I mean . . ."
+        mc "I haven't fully forgiven him yet. I need to know why he left me all those years ago."
+        tate ". . ."
+        tate "Life is but a walking skibidi.\n You better griddy as hard as you can."
         scene black
-        mcn "Dago continues to introduce almost every clique there is until lunch is over."
-        show text "After School" with dissolve
-        stop music
+        pause 5.0
+        show text "End of Chapter 2" with dissolve
         pause 1.0
         hide text with fade
-        scene bg school gates with fade
-        play music "audio/sfx_bell.mp3" fadein 1.0 volume 0.5
-        queue music "audio/bgm_skibidi.mp3" fadein 1.0 volume 0.5
-        show dago neutral with dissolve
-        mc "Well, see you tomorrow Dago. Thanks for everything today."
-        mci "I’m tired asf from the first day already… its so bad on G."
-        nug "No sweat vro."
-        nug "We should walk home together cos we live in the same neighbourhood."
-        mc "Nah all good i have to go buy some snacks at the konbini so. . ."
-        nug ":("
-        nug "Aw okay bet vro see you tomorrow."
-        mci "Wait i lowkey feel bad for this mf? . . .whatever I just really want some alone-time rn though."
-        mcn "Dago suddenly levitates into the sky, and shoots off like a rocket into the direction of our neighbourhood."
-        hide dago neutral 
-        with moveouttop
-        pause 5.0
-        mci ". . .Wtf."
-        stop music
-        scene bg konbini
-        with fade
-        play sound "audio/sfx_store_bell.mp3" fadein 1.0 volume 0.5
-        play music "audio/bgm_gigachad.mp3" fadein 1.0 volume 0.5
-        mcn "Once you enter the store you feel an almost oppressive amount of aura."
-        mcn "At the cashier, a man is casually curling 60 kilo weights."
-        show gigachad with dissolve
-        gig ". . ."
-        mcn "But he isn’t just any man… you can feel it in your bones."
-        mcn "This was an {i}alpha male{/i}."
-        mcn "You stockpile on some Skyline Chilli and then timidly waddle up to the cashier."
-        gig "Hey, first time at Gyattalicious? Haven’t seen you around before."
-        mcn "He mogs you so hard you have to physically restabilise your balance without falling down on your knees like a rando in Walmart."
-        mc "Uhh yeah! Just moved here and all. Oh I’m a junior. I go to the local high school. Ohio Rizz High."
-        mcn "A glint of knowing pasts his eyes."
-        gig "You're a real one king."
-        mcn "You quake in your boots."
-        gig "I graduated from there last year, and now I go to Mogging College."
-        mc "Wow. . . That’s so skibidi!!"
-        gig "If you ask around, I bet people will tell you I was a legend back in the old days."
-        mcn "He appears to now possess the wisdom of a Boomer at age 18"
-        mcn "Perchance he encountered some real struggles back in high school, you think, for him to developed such wisdom."
-        gig "Anyways, lemme just ring up your snacks for you rn."
-        play sound "audio/sfx_cashier_scanning.mp3" fadein 1.0 volume 0.5
-        mci "Up close, his features seem even sharper."
-        mci "His jawline looks like it could cut me if I ran my finger along it lolol."
-        stop music
-        scene bg nighttime streets with fade
-        play music "audio/bgm_nighttime.mp3" fadein 1.0 volume 0.5
-        mci "Damn, it’s so quiet here at night, it’s unnerving. Back in Florida we never had streets this still."
-        play sound "audio/sfx_footsteps.mp3" fadein 1.0 volume 0.5
-        mcn "You hear someone from behind."
-        mcn "Not exactly behind behind, but somehow closing in on the distance between you and them."
-        mci "I am fr getting chased rn??"
-        play sound "audio/sfx_crash.mp3" fadein 1.0 volume 0.7
-        mcn "You gather ur balls and speedily take a peek behind-"
-        scene bg nighttime streets with hpunch
-        chill "Ahh. . . my ass crack."
-        show chill guy mystery with dissolve
-        mc ". . . !"
-        mcn "Under the streetlamp, you can finally distinguish his features from the dark surrounding you."
-        mcn "You search his eyes for an awkwardly long amount of time."
-        mcn "And that’s when it hits you."
-        mc "Huh? Aren’t you. . ."
-        mc "Chill Guy?!"
-        hide chill guy mystery with dissolve
-        show chill guy neutral with fade
-        stop music
-        play music "audio/bgm_chillguy.mp3" fadein 1.0 volume 0.5
-        chill "Oh, [mcname]? Is it really you?"
-        chill "I can’t believe I met you here in Ohio, out of all places."
-        mcn "Chill Guy gives you a lightskin stare."
-        mcn "You clench your fists, the convenience store bags digging into you."
-        mci "We haven’t seen each other in 7 years… And this dude has the nerve to be so chill about it. . . !!"
-        mci "{b}He{/b} was the one who suddenly abandoned me all those years ago, when we were still children back in Florida."
-        mci "Sigh… back in the old days. It’s so long ago I even remember the Bite of ‘87."
-        mci "I won’t forgive him for that. . . '" 
-        mci "I still haven’t."
-        mcn "A smile limps its way back on your face."
-        mc "Yeah! Ahahah.a.ha. A.'"
-        mc "Fancy seeing you here"
-        mc "I need to griddy out of here. See ya!!!!"
-        hide chill guy neutral
-        show chill guy serious
-        chill "Wait, [mcname]. . ."
-        play sound "audio/sfx_running.mp3" fadein 1.0 volume 0.5
-        mcn "You rush past him before you can regret the longing that colours his eyes. The pavement gives way to your feet, a loud heartbeat drumming in your skull."
-        scene bg bedroom
-        with fade
-        stop music
-        play music "audio/bgm_symphony.mp3" fadein 1.0 volume 0.5
-        mci "Damn, today was so:"
-        menu:
-            "Skibidi":
-                jump choiceskibidi
-            "Unskibidi":
-                jump choiceunskibidi
-            
-    
-    label choiceskibidi:
-        mci "Dago was super nice to me today for some reason."
-        mci "I hope we can become closer friends."
-        mci "Oh! And Edgemund, was it?"
-        mci "He would be lowkey goated at crossdressing… hmm… "
-        jump day1sleep
-    
-    label choiceunskibidi:
-        mci "Fuck, I hope Chill Guy doesn’t go to the same school as me. I didn’t see him there today, but it’s the only possible school around here."
-        jump day1sleep
-    
-    label day1sleep:
-        mcn "And just like that you drift off to sleep."
-        scene black
-        tate "I’m a feminist."
-        mci "Huh?? Why am I dreaming about Andrew Tate?!"
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+        show text "Starting Chapter 3" with dissolve
         
+        #bg fade to black. 
+        # player returns to main screen?
+        $ gyatt_coins = gyatt_coins +25
 
+# cursor now says "Go o shool (day 3) fpr tje door"
 
 
 
 
 
+    return
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-
-
-
-        
-
-
-
-            
-        
-
-
-
-
-
-
-
-
-
-
-
-
-        
-
-        
-
-
-
-
-
-
-
-            
-
-        
-            
-        
-
-
-
-
-        
-
-
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-    
