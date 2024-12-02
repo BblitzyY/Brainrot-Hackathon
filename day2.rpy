@@ -309,6 +309,10 @@ label day2:
     label subconscious:
         stop music
         scene black
+        scene brain with fade
+        show tate at left
+        show tate at right
+        with dissolve
         $ gyatt_coins = gyatt_coins +25
         tate "So . . . you're ogling Chill Guy's gyatt, huh?"
         tate "You zesty for Chill Guy?"
