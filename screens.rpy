@@ -1,4 +1,5 @@
-﻿################################################################################
+﻿
+################################################################################
 ## Initialization
 ################################################################################
 
@@ -206,6 +207,12 @@ style input:
 
 screen choice(items):
     style_prefix "choice"
+    viewport:
+        scrollbars "vertical"
+        mousewheel True
+        draggable True
+
+        side_yfill True
 
     vbox:
         for i in items:
