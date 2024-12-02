@@ -1,5 +1,5 @@
 ﻿define mc = Character(mcname, color="#ffffff", what_prefix='"', what_suffix='"')
-define mci = Character("mcname", color="#ffffff", what_italic=True)
+define mci = Character(mcname, color="#ffffff", what_italic=True)
 define mcn = Character(None, what_color="ffee8c")
 define nug = Character("Dago", color="#ffa500", what_prefix='"', what_suffix='"')
 define chill = Character("Chill Guy", color="#b0e0e6", what_prefix='"', what_suffix="'")
