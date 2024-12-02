@@ -1,20 +1,10 @@
-﻿define mc = Character(mcname, color="#ffffff", what_prefix='"', what_suffix='"')
-define mci = Character(mcname, color="#ffffff", what_italic=True)
-define mcn = Character(None, what_color="ffee8c")
-define nug = Character("Dago", color="#ffa500", what_prefix='"', what_suffix='"')
-define chill = Character("Chill Guy", color="#b0e0e6", what_prefix='"', what_suffix="'")
-define gig = Character("???", color="#cbc3e3", what_prefix='"', what_suffix="'")
-define amg = Character("Amongus Imposter", color="#c51111", what_prefix='"', what_suffix="'")
-define emo = Character("Edgemund", color="#1c1c84", what_prefix='"', what_suffix="'")
-define tom = Character("Tomato Boy", color="#ffc0cb", what_prefix='"', what_suffix="'")
-define ksi = Character("KSI", color="#c8ffc8", what_prefix='"', what_suffix="'")
-define quan = Character("Quandale Dingle Fairy", color="#1bfc06", what_prefix='"', what_suffix="'")
-define ski = Character("Mr Skibidi Toilet", color="#cabd99", what_prefix='"', what_suffix="'")
-define tate = Character("Andrew Tate", color="#d3d3d3", what_prefix='"', what_suffix="'")
-
+﻿
 # leaving gyatt coins code blank since it carries over from the very first variable definition 
 
-label start: 
+# day 3 starts here
+define gyatt_coins = 25
+
+label day3: 
     scene black 
     pause 1.0 
     show text "Chapter 1 - Day 3" with dissolve
@@ -27,8 +17,8 @@ label start:
     mci "Tuesday, I was through with hoping."
     mci "And today I hope Chill Guy is at gym class this morning." 
 
-    play sound "audio/sfx_dago" fadein 1.0 volume 1 
-    show dago neutral
+    play sound "audio/sfx_gegagedigedagedago.mp3" fadein 1.0 volume 1 
+    show dago neutral with fade
     nug "Ermmm, what the sigma, vro."
     nug "Are you late to class again?"
 
@@ -39,7 +29,7 @@ label start:
             nug "We’re going to be late."
             jump d3_cont_1
         "Wdym? I already went.": 
-            gyatt += 100 
+            $ gyatt_coins += 100 
             mc "I bedwars built my way to school and back."
             nug "You can't be caught lacking like that."
             nug "Stop capping cuh."
@@ -50,23 +40,23 @@ label start:
         nug "We’re actually going to be late to morning gym class and you know how Mr Skibidi doesn’t fw that."
     
     mc "It’s not like {i}you’re{/i} on time every day."
-    hide dago
+    hide dago neutral with dissolve
     mcn "Dago was pretty quick to clear up my joke, huh."
     mcn "Not even a level 1000 mafia boss could make it to school in 10 minutes when we live 19.69 minutes away."
-    show dago
+    show dago neutral with dissolve
     nug "Whatcha thinking, ya chicken nugget?"
     nug "Are you gonna skip class?"
 
     menu:
         "No, what if I miss out on Chill Guy’s master rizzin- I MEAN, nothing—uh I didn’t say anything.":
             mc "I just …kinda want to see him today." 
-            hide dago
+            hide dago neutral with dissolve
             mci "I can’t tell Dago the details about our past. . ."
-            show dago
+            show dago neutral with dissolve
             nug "Yeah vro, wtv that means."
             nug "Hurry up, and let’s cue the Subway Surfers vibes already!"
             mc "Goofy ahh chicken nugget. Of course."
-            hide dago
+            hide dago neutral with dissolve
             mci "There's no way I’m already going to skip season 1 of Chill guy x Me!!"
             jump gym_class
 
@@ -90,7 +80,7 @@ label start:
     label gym_class:
         scene bg gym with dissolve
         play music "audio/bgm_dti" fadein 1.0 volume 0.5
-        hide dago
+        hide dago neutral with dissolve
 
         mcn "Mr Skibid has instructed the whole class to play ball games."
         mcn "You see Chill Guy absolutely Duke Dennis-ing the court."
@@ -106,17 +96,18 @@ label start:
         show ksi at left
         ksi "Watch me!"
         mcn "KSI bounces volleyball up and down violently on the floor."
-        show chill guy neutral at right with dissolve
+        show chill guy neutral at right 
+        with dissolve 
         chill "Chill down KSI." 
         chill "You’re a big bomboclat with a boombox; so not bing chilling rn."
         hide ksi
         hide chill guy neutral
         with dissolve
         
-        show dago
-        dago "DAWG SCHMLAWG, YEAH!!"
-        dago "We should totally, literally, ackshually go up and mew with them frfr."
-        hide dago 
+        show dago neutral
+        nug "DAWG SCHMLAWG, YEAH!!"
+        nug "We should totally, literally, ackshually go up and mew with them frfr."
+        hide dago neutral 
 
         mcn "A ball comes whizzing through the air and then some strange blob blocks your vision." with hpunch
         mcn "Is it a bird?"
@@ -146,7 +137,7 @@ label start:
         default bandaid_scene = False
         menu:
             "Confront KSI.":
-                gyatt += 100 
+                $ gyatt_coins += 100 
                 mc "That was so beta of you, KSI."
                 mc "You're acting kinda sus ngl."
                 ksi "Womp womp, what a loser."
@@ -191,13 +182,13 @@ label start:
         mcn "After gym class, everyone is hella knocked out."
         mcn "Mr Skibidi gives y\’\all lunch credit since it\’\s his birthday today."
         
-        show dago with dissolve
-        dago "[name] you weren’t capping when you said Chill Guy got a gigantic enormous boo boo!!"
+        show dago neutral with dissolve
+        nug "[mcname] you weren’t capping when you said Chill Guy got a gigantic enormous boo boo!!"
         mcn "Dago dramatically looks around."
-        dago "OMG it’s Chill Guy chan again!"
+        nug "OMG it’s Chill Guy chan again!"
         mcn "He waves Chill Guy over, much to your chagrin."
-        dago "Yo Chill guy?!!! You should come chug jug with me and my gang."
-        hide dago with dissolve
+        nug "Yo Chill guy?!!! You should come chug jug with me and my gang."
+        hide dago neutral with dissolve
 
         mci "I think I’m tripping."
         mci "Did Dago just invite Chill Guy to chug with us?"
@@ -218,15 +209,15 @@ label start:
         chill "You guys feeling cool?"
         chill "'Cos I'm feeling pretty cool in here."
         
-        show dago at right
-        dago "Is vro feeling better?"
-        dago "I typed F in the chat just for you."
+        show dago neutral at right
+        nug "Is vro feeling better?"
+        nug "I typed F in the chat just for you."
         chill "I’m gassed."
         chill "But we ball. Didn’t hurt."
 
         play sound "audio/sfx_fein.mp3" fadein 1.0 volume 0.3
         chill "Looks pretty fe!n to me."
-        hide dago 
+        hide dago neutral 
         hide chill 
         mcn "Chill Guy nonchalantly sits down next to you."
         stop music fadeout 1.0
@@ -234,17 +225,18 @@ label start:
         mci "OMG OMG OMG he’s so close. . ."
         mci "I could literally whisper ‘I like your cut G’ in his ear rn."
 
-        show dago
-        dago "Where’s that mouth breather that’s normally in your gang?"
-        dago "Is he grounded yet?"
-        hide dago 
+        show dago neutral
+        nug "Where’s that mouth breather that’s normally in your gang?"
+        nug "Is he grounded yet?"
+        hide dago neutral 
 
         play music "audio/bgm_thickofit.mp3" fadein 1.0 volume 0.5
         mcn "KSI suddenly pulls up to the lunch table and shoves you to the side, dumping a grimace shake onto your head."
         show ksi 
         ksi "Oh, my bad unc."
         ksi "I could smell your yappuccino from the lunch line."
-        show chill guy neutral with dissolve at right 
+        show chill guy neutral at right 
+        with dissolve 
         chill "Zesty ahh mf."
         chill "That’s not very chill of you KSI, you jelly of [mcname] or something?"
         chill "[mcname], you feeling swagger?"
@@ -263,12 +255,12 @@ label start:
         ski ". . ."
         ski "Y’all gotta stop gooning during lunch."
         ski "Detention, all of you."
-        show dago at right
-        dago "Ermmm Sensei, I didn’t do anything though."
+        show dago neutral at right
+        nug "Ermmm Sensei, I didn’t do anything though."
 
         menu:
             "Stand up for Dago.":
-                gyatt += 100 
+                $ gyatt_coins += 100 
                 mc "Yeah KSI’s always capping."
                 mc "Swear on my knee surgery tomorrow that Dago’s clean."
                 jump d3_cont_3
@@ -288,26 +280,26 @@ label start:
             jump detention 
 
     label sin_city:
-        show dago 
-        dago "So. . . where do you wanna use your Fortnite Battle Pass today?"
+        show dago neutral with fade
+        nug "So. . . where do you wanna use your Fortnite Battle Pass today?"
         mc "Are we gonna go touch grass?"
-        dago "Nah, vro, we can go to Sin City though?"
-        dago "Or take a visit to the Backrooms?"
-        dago "Just gotta be back before GTA 6 comes out."
+        nug "Nah, vro, we can go to Sin City though?"
+        nug "Or take a visit to the Backrooms?"
+        nug "Just gotta be back before GTA 6 comes out."
 
         menu: 
             "Sin City. Then maybe I can build up more alpha aura.":
-                dago "Let’s go back to my gronk cave and shift from there."
+                nug "Let’s go back to my gronk cave and shift from there."
                 jump sin_city_2 
             "Backrooms? What in the skibidi is that? We could check it out. . .":
-                dago "Actually nahh, the Backrooms have like negative aura points lowkey."
-                dago "I can’t be seen with a negative social credit."
-                dago "Let’s just go Sin City instead."
-                dago "But good on ya for having the guts."
+                nug "Actually nahh, the Backrooms have like negative aura points lowkey."
+                nug "I can’t be seen with a negative social credit."
+                nug "Let’s just go Sin City instead."
+                nug "But good on ya for having the guts."
                 jump sin_city_2 
         
         label sin_city_2:
-            hide dago 
+            hide dago neutral 
             mcn "You follow Dago back to his house obediently, but then you notice some sort of force pulling you towards the lake nearby."
             scene bg lake with dissolve 
             play music "audio/bgm_usher.mp3" fadein 1.0 volume 0.5 
@@ -316,25 +308,25 @@ label start:
             mci "I think I’ve heard about this before."
             mci "A lake so abundant of incel energy that it repels actual celibates."
 
-            show dago
-            dago "Wait, whose immense aura is this?"
-            dago "It's coming from that direction."
+            show dago neutral
+            nug "Wait, whose immense aura is this?"
+            nug "It's coming from that direction."
             mc "Is it just me, or do we feel more chill now?"
             mcn "You feel some kind of chilly breeze blanket you, but it’s not to the point of freezing."
             mcn "It’s like pressing a slightly chilled bottle of Prime to your face."
-            dago "Vro. . ."
-            dago "Is that Chill Guy over there on the park bench? He’s so based."
+            nug "Vro. . ."
+            nug "Is that Chill Guy over there on the park bench? He’s so based."
 
-            show chill guy neutral
+            show chill guy neutral at right
             mcn "You notice that Chill Guy has fallen asleep on the grass next to the lake."
             menu: 
                 "Give him your jacket.":
-                    gyatt += 100
+                    $ gyatt_coins += 100
                     mcn "You start stripping and give him your trench coat, shrinking you to just a petit kid."
                     mcn "Dago turns to whispering to avoid waking Chill Guy up."
-                    show dago with dissolve
-                    dago "Damn vro, that was so straightforward. So skibidi even."
-                    dago "Whatchu gon’ do now?"
+                    show dago neutral with dissolve
+                    nug "Damn vro, that was so straightforward. So skibidi even."
+                    nug "Whatchu gon’ do now?"
                     jump d3_cont_4
 
                 "Wake him up with your sweet singing.":
@@ -342,7 +334,8 @@ label start:
                     mc "Shen zai wo you bing chilling!!"
                     hide chill guy neutral with dissolve
                     mcn "Chill Guy stirs, and through a languid fog realises that he is surrounded by you and Dago."
-                    show chill guy neutral with dissolve 
+                    show chill guy neutral at right
+                    with dissolve
                     chill ". . ."
                     mc ". . ."
                     chill "Ayo, the pizza here."
@@ -354,7 +347,7 @@ label start:
                 # independent event
                 menu: 
                     "Should we griddy him back to school?":
-                        dago "Yeah, good idea vro."
+                        nug "Yeah, good idea vro."
                         jump d3_cont_5 
                     "Take Chill Guy back to your house and see how freaky you get…":
                         mcn "Just joking. Or are you?"
@@ -369,7 +362,8 @@ label start:
                 mcn "Your alpha energy is detecting something sus."
 
                 scene bg hallway2 with fade
-                show ksi with dissolve at left 
+                show ksi at left 
+                with dissolve 
                 mcn "You look behind you and you see KSI peeking out behind a corner."
                 hide ksi with dissolve
                 mcn "You ignore it, but find it strange anyways that he’d stalk you instead of just talking."
@@ -380,9 +374,10 @@ label start:
                 ski "That is like the opposite of having goated glizzies with the sauce."
                 ski "Detention. All of you."
 
-                show dago with dissolve at left 
-                dago ":("
-                hide dago 
+                show dago neutral at left 
+                with dissolve 
+                nug ":("
+                hide dago neutral 
                 scene black 
                 with dissolve 
                 stop music fadeout 1.0
@@ -413,9 +408,9 @@ label start:
             hide ksi with dissolve 
 
             show dago neutral with dissolve 
-            dago "I’m gonna take a quick nap."
-            dago "It's okay, I can mew in my sleep."
-            hide dago 
+            nug "I’m gonna take a quick nap."
+            nug "It's okay, I can mew in my sleep."
+            hide dago neutral 
 
             show chill guy neutral with dissolve 
             mcn "Slowly, Chill Guy’s calm aura next to you slows you down and you end up falling asleep as well."
@@ -504,8 +499,8 @@ label start:
 
         label chill_crib:
             show dago neutral with dissolve 
-            dago "You’re gonna lose aura points if you get us lost."
-            dago "Your goon cave’s legitimately that way, right?"
+            nug "You’re gonna lose aura points if you get us lost."
+            nug "Your goon cave’s legitimately that way, right?"
             hide dago neutral with dissolve 
 
             mci "Kyaaaah, I'm about to have a sugar crash."
@@ -520,9 +515,11 @@ label start:
             mc "But something feels a bit uncanny right now, innit?"
             mc "Feels lowkey like smth is gonna change."
 
-            show dago neutral with dissolve at left 
-            dago "YOU GRONKATRONS HAVE LORE????"
-            hide dago neutral with dissolve at left 
+            show dago neutral at left 
+            with dissolve 
+            nug "YOU GRONKATRONS HAVE LORE????"
+            hide dago neutral
+            with dissolve 
             mcn "You feel a sudden cold blast coming from Chill Guy’s direction."
             mc ". . . ?"
             mc "Hey Chill Guy. . ."
@@ -535,7 +532,7 @@ label start:
 
             menu:
                 "Ask if you all can griddy a bit faster home.":
-                    gyatt += 100 
+                    $ gyatt_coins += 100 
                     mcn "You just picked up +100 gyatt coins."
                     mc "I don’t want you to catch a cold because of me."
                     jump d3_cont_6
@@ -552,8 +549,8 @@ label start:
             label d3_cont_6:
                 mcn "Dago faces you."
                 show dago neutral with dissolve 
-                dago "We should really get inside quick"
-                dago "I didn’t know Ohio weather could get this bad."
+                nug "We should really get inside quick"
+                nug "I didn’t know Ohio weather could get this bad."
 
                 mcn "As you look at Dago, you spot the shadowed silhouette of a person near an alleyway."
                 mcn "Is that. . ."
@@ -564,7 +561,7 @@ label start:
                 pause 2.0 
                 stop music fadeout 1.0
                 mcn "More chapters coming soon!"
-                mcn "Thanks for playing the beta."
+                mcn "Thanks for playing the beta!"
                 jump main_screen
 
     return 
