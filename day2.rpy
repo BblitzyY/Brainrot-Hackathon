@@ -309,7 +309,7 @@ label day2:
     label subconscious:
         stop music
         scene black
-        scene brain with fade
+        scene bg brain with fade
         show tate at left
         show tate at right
         with dissolve
